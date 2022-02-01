@@ -475,7 +475,7 @@ font-family: "Inconsolata";
 				right: 0;
 				z-index: 101;
 				width: 500px;
-				height: 250px;
+				height: 420px;
 				margin: auto;
 			}
 			@media (max-width: 768px) {
@@ -499,7 +499,7 @@ font-family: "Inconsolata";
 				border-radius: 15px;
 				outline: none;
 			}
-			.popup .email {
+			.popup .form-input {
 				background-color: #bdbdbd;
 				padding: 15px;
 				font-family: "Open Sans", sans-serif;
@@ -510,6 +510,7 @@ font-family: "Inconsolata";
 				-webkit-appearance: none;
 				border-radius: 3px;
 				width: 100%;
+				margin-bottom: 10px;
 			}
 			.popup .btn {
 				border: 1px solid #ccc;
@@ -682,7 +683,17 @@ font-family: "Inconsolata";
 				<button type="button" class="result" readonly>$<span id="result">0</span></button>
 				<span class="send-on-email" id="send-on-email" onclick="openForm()">Send on email</span>
 			</div>
-			
+			<div class="overlay" id="overlay" style="display:none;"></div>
+			<div class="popup" id="popup" style="display:none;">
+				<div class="popup-inner">
+				<input type="button" name="Close" class="s3-btn-close" onclick="closeForm();" value="&times;">
+				<h3>Send on Email</h3>
+					<input type="text" name="fullname" class="email" placeholder="Full Name" required />
+					<input type="email" name="emailid" class="email" placeholder="Email id" required />
+					<input type="text"name="mbnumber" class="email" placeholder="Mobile Number" required />
+					<button type="submit" class="btn">Send</button>
+				</div>
+			</div>
         </form>
 
 			</div><!-- .entry-content -->
@@ -749,17 +760,6 @@ font-family: "Inconsolata";
 									<div class="left"><p>&copy; 2021 <a href="//underthink.it">underthink</a> All Rights Reserved.</p></div>
 					</div><!-- end footer secondary-->
 		</div><!-- end footer inside-->
-	</div>
-	<div class="overlay" id="overlay" style="display:none;"></div>
-	<div class="popup" id="popup" style="display:none;">
-		<div class="popup-inner">
-		  <input type="button" name="Close" class="s3-btn-close" onclick="closeForm();" value="&times;">
-		  <h3>Send on Email</h3>
-		  <form action="">
-			  <input type="email" id="txtEmail" class="email" />
-			  <button type="submit" onclick="Javascript:checkEmail();" class="btn">Send</button>
-		  </form>
-		</div>
 	</div>
 
 	<script type='text/javascript' src='//underthink.it/wp-content/themes/swell/js/jquery.flexslider-min.js?ver=2.6.0'></script>
