@@ -475,7 +475,7 @@ font-family: "Inconsolata";
 				right: 0;
 				z-index: 101;
 				width: 500px;
-				height: 200px;
+				height: 250px;
 				margin: auto;
 			}
 			@media (max-width: 768px) {
@@ -499,6 +499,32 @@ font-family: "Inconsolata";
 				border-radius: 15px;
 				outline: none;
 			}
+			.popup .email {
+				background-color: #bdbdbd;
+				padding: 15px;
+				font-family: "Open Sans", sans-serif;
+				color: #6a6a6a;
+				border: 1px solid rgba(0,0,0,.05);
+				background: #f7f7f7;
+				font-size: .9em;
+				-webkit-appearance: none;
+				border-radius: 3px;
+				width: 100%;
+			}
+			.popup .btn {
+				border: 1px solid #ccc;
+				border-color: #ccc #ccc #bbb #ccc;
+				border-radius: 3px;
+				background: none;
+				color: #191919 !important;
+				cursor: pointer;
+				-webkit-appearance: button;
+				line-height: 1;
+				padding: 0.6em 1em 0.4em;
+				font-size: 26px;
+				cursor: pointer;
+				margin-top: 10px;
+			}
 			@media only screen and (max-width : 1024px) {
 				.calculator-label {width: 40%;}
 				.calculator-form {width: 60%;}
@@ -508,6 +534,7 @@ font-family: "Inconsolata";
 				.calculator-label {width: 100%;}
 				.calculator-form {width: 100%;}
 				.calculator-label sub {margin-bottom: 5px;}
+				.send-on-email {margin-left: 0px; margin-top: 15px;}
 			}
         </style>
         <form name="calculator" class="calculator-wrapper">
@@ -729,8 +756,8 @@ font-family: "Inconsolata";
 		  <input type="button" name="Close" class="s3-btn-close" onclick="closeForm();" value="&times;">
 		  <h3>Send on Email</h3>
 		  <form action="">
-			  <input type="email" id="txtEmail" class="calculator-form" />
-			  <button type="submit" onclick="Javascript:checkEmail();" class="result">Send</button>
+			  <input type="email" id="txtEmail" class="email" />
+			  <button type="submit" onclick="Javascript:checkEmail();" class="btn">Send</button>
 		  </form>
 		</div>
 	</div>
